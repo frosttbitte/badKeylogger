@@ -11,10 +11,8 @@ def motion(event):
     x, y = event.x, event.y
     print('{}, {}' .format(x,y))
 
-
-
 def up(e):
-    print('lmao\n', e.char, '\n', e)
+    print('Key Released: ', e.char)
 
 def close(event):
     window.destroy()

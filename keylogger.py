@@ -42,7 +42,7 @@ window.wm_attributes('-transparentcolor','#add123')
 
 
 
-path = 'C:/Users/Alex/Desktop/fox2/logs.txt'
+path = 'C:/Users/xxxx/Desktop/fox2/logs.txt'
 sys.stdout = Logger(path)
 print(f"Starting Log: {current_time}")
 

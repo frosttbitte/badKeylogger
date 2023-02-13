@@ -3,14 +3,6 @@ from tkinter import Tk, Label
 from tkinter.ttk import *
 import time
 
-def key_pressed(event):
-    w = Label(window, text="Key Pressed: " + event.char)
-    w.place(x=50,y=50)
-
-def motion(event):
-    x, y = event.x, event.y
-    print('{}, {}' .format(x,y))
-
 def up(e):
     print('Key Released: ', e.char)
 
@@ -39,9 +31,14 @@ current_time = time.strftime("%H:%M:%S", t)
 
 window = Tk()
 window.bind("<Escape>", close)
-window.bind('<Motion>', motion)
-window.bind("<KeyPress>", key_pressed)
 window.bind('<KeyRelease>', up)
+
+
+#window attributes
+window.attributes('-fullscreen', True)
+window.title("Nothing to see here...")
+window.config(bg = '#add123')
+window.wm_attributes('-transparentcolor','#add123')
 
 
 
@@ -52,3 +49,25 @@ print(f"Starting Log: {current_time}")
 
 window.mainloop()
 
+
+
+
+
+
+
+
+
+
+#mouse posistion (unused)
+
+# def motion(event):
+#     x, y = event.x, event.y
+#     print('{}, {}' .format(x,y))
+#window.bind('<Motion>', motion)
+
+#show key pressed on screen
+
+#def key_pressed(event):
+    #w = Label(window, text="Key Pressed: " + event.char)
+    #w.place(x=500,y=500)
+#window.bind("<KeyPress>", key_pressed)
